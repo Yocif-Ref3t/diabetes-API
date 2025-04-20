@@ -16,7 +16,6 @@ def predict():
         prediction = model.predict(features)  
         print(prediction)
         return jsonify({"prediction": int(prediction[0])})  
-    
     except Exception as e:
         return jsonify({"error": str(e)}), 400  
 
